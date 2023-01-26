@@ -1,0 +1,20 @@
+extends main
+
+block content
+    main
+        section(class="current-movies")
+            h2(class="current-movies-header") Alla filmer i databasen
+            ul(class="current-movies-list")
+                each movie in movies
+                    a(href="/movies/"+movie.id)
+                        li(class="current-movies-card")
+                            img(src=movie.image.url, class="current-movies-card-image")
+                            h3(class="current-movies-card-title") #{movie.title}
+    
+        aside(class="showtime")
+            h2(class="showtime-header") VISNINGSTIDER
+            ul(class="showtime-showtimes")
+            button(class="show-more-days") VISA FLERA DAGAR
+
+append scripts
+    script(src='/static/js/asideShowTimes.js', type="module")

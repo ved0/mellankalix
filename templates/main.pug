@@ -1,0 +1,89 @@
+html
+    head 
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/static/main.css" type="text/css")
+        link(rel="shortcut icon" href="#")
+        title Tomtens Biograf
+    body
+        header 
+            a(href="/"): img(class="header-logo", role="button", src="/static/img/logo.svg")
+            button(class="header-list-toggle")
+            ul(class="header-list")
+                li(class="header-list-item"): a(href="/movies") Alla filmer
+                li(class="header-list-item"): a(href="/open") Öppettider
+                li(class="header-list-item"): a(href="/placeholder") Om oss 
+                li(class="header-list-item"): a(href="/placeholder") Biljettinfo
+
+        nav
+            ul(class="nav-list")
+                li(class="nav-list-item")
+                    div(class="dropdown")
+                        button(class="dropdown-button")  Repertoar 
+                            i(class="fa fa-caret-down")
+                        div(class="dropdown-content", id="dropdown-repertoar")
+                            a(href="placeholder") Hela bioprogrammet
+                            a(href="placeholder") Kommande premiärer
+                            a(href="placeholder") Erbjudande på matinéfilm
+                li(class="nav-list-item")
+                    div(class="dropdown")
+                        button(class="dropdown-button")  Serverade salonger 
+                            i(class="fa fa-caret-down")
+                        div(class="dropdown-content", id="dropdown-salonger")
+                            a(href="placeholder") Salong Alcatraz
+                            a(href="placeholder") Salong Bar Deco
+                            a(href="placeholder") Erbjudande på matinéfilm
+                li(class="nav-list-item")
+                    div(class="dropdown")
+                        button(class="dropdown-button")  Specialvisningar  
+                            i(class="fa fa-caret-down")
+                        div(class="dropdown-content", id="dropdown-specialvisningar")
+                            a(href="placeholder") Klassiker 
+                            a(href="placeholder") Sing Along
+                            a(href="placeholder") Frukostbio
+                            a(href="placeholder") Cinemateket
+                li(class="nav-list-item")
+                    div(class="dropdown")
+                        button(class="dropdown-button")  Live på bio  
+                            i(class="fa fa-caret-down")
+                        div(class="dropdown-content", id="dropdown-live")
+                            a(href="placeholder") Hela bioprogrammet
+                            a(href="placeholder") Opera
+                            a(href="placeholder") Teater
+                            a(href="placeholder") Konsert
+                            a(href="placeholder") Konst
+                li(class="nav-list-item")
+                    div(class="dropdown")
+                        button(class="dropdown-button")  Bar & Bistro 
+                            i(class="fa fa-caret-down")
+                        div(class="dropdown-content", id="dropdown-bar&bistro")
+                            a(href="placeholder") Meny
+                            a(href="placeholder") Premiärfredag
+                            a(href="placeholder") Filmquiz
+    
+    block content
+
+    footer    
+        div(class="footer-section")
+            h3 Tomtens Biograf
+            p Storgatan 23
+                br
+                |999 00 Mellankalix
+        div(class="footer-section")
+            h3 Kontakta oss
+            p Epost: 
+                a(href="#") info@tomtensbiograf.se
+            p Telefon: 999 - 000 22 33
+            p Följ oss på 
+                a(href="#") Facebook 
+                |och 
+                a(href="#") Instagram
+        div(class="footer-section")
+            h3 I samarbete med:
+            img(src="/static/img/sponsors/sponsor_sfilm.png")
+            img
+    
+    block scripts
+        script(src='/static/js/hamburgerMenu.js')
+        script(src='/static/js/navMenu.js')

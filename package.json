@@ -1,25 +1,32 @@
 {
-	"name": "mellankalix",
-	"version": "1.0.0",
-	"description": "Put pre-commit in your \".git/hooks/\" folder  \r It prevents commits to main branch",
-	"main": "index.js",
-	"type": "module",
-	"scripts": {
-		"sass": "sass --no-source-map scss/main.scss static/main.css",
-		"watch": "sass --no-source-map --watch scss/main.scss static/main.css",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/saeraa/mellankalix.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/saeraa/mellankalix/issues"
-	},
-	"homepage": "https://github.com/saeraa/mellankalix#readme",
-	"devDependencies": {
-		"sass": "^1.57.0"
-	}
+  "name": "mellankalix",
+  "version": "1.0.0",
+  "description": "Put pre-commit in your \".git/hooks/\" folder  \r It prevents commits to main branch",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon .",
+    "sass": "sass --no-source-map scss/main.scss static/main.css",
+    "watch": "sass --no-source-map --watch scss/main.scss static/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saeraa/mellankalix.git"
+  },
+  "author": "Vedad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saeraa/mellankalix/issues"
+  },
+  "homepage": "https://github.com/saeraa/mellankalix#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sass": "^1.57.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.0",
+    "pug": "^3.0.2"
+  }
 }
