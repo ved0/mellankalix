@@ -320,7 +320,7 @@ footer img:last-child {
 }
 .current-movies-header {
   text-align: center;
-  margin-block: 3rem 1rem;
+  margin-block: 1rem 2rem;
 }
 .current-movies-list {
   margin-inline: auto;
@@ -352,7 +352,7 @@ footer img:last-child {
   transform: scale(1.01);
 }
 .current-movies-list .current-movies-card-title {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: 0.95em;
   transition: all 0.3s;
   text-align: center;
   margin-top: 0.5rem;
