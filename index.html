@@ -12,6 +12,7 @@
 
 <body>
   <header>
+    <button class="login-signup">Logga in / Bli medlem</button>
     <a href="index.html">
       <img class="header-logo" role="button" src="static/img/logo.svg" alt="logo" />
     </a>
@@ -120,7 +121,45 @@
   </nav>
 
   <main>
-   
+    <div class="login-sign-up-container">
+    <div class="login">
+      <form class="login-form">
+        <label for="username"><i class="material-icons">person</i>Användarnamn:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password"><i class="material-icons">key</i>Lösenord:</label>
+        <input type="password" name="password" id="password" autocomplete="password" required>
+        <input type="submit" name="submit" id="submit" value="Logga in">
+      </form>
+      <span>eller</span>
+      <a class="register-me" href="">Registrera dig</a>
+      <button class="close-login"><i class="material-icons">close</i></button>
+      <h2>Logga in</h2>
+  </div>
+
+  <div class="sign-up-container">
+    <div class="sign-up">
+      <form class="sign-up-form">
+        <label for="name"><i class="material-icons">person</i>För- och efternamn:</label>
+        <input type="text" name="name" id="name" pattern="[A-ZÀ-ÿ][a-zÀ-ÿ_,.'-]{0,19}[ ][A-ZÀ-ÿ][a-zÀ-ÿ_,.'-]{2,21}" title="Ex. Karl-Johan Göransson" required>
+        <label for="new-username"><i class="material-icons">badge</i>Användarnamn:</label>
+        <input type="text" name="new-username" id="new-username" required>
+        <label for="email"><i class="material-icons">mail</i>E-mail:</label>
+        <input type="email" name="email" id="email" autocomplete="e-mail" required>
+        <label for="new-password"><i class="material-icons">key</i>Lösenord:</label>
+        <input type="password" name="new-password" id="new-password" autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Lösenordet måste innehålla minst en (1) siffra, en (1) liten bokstav, en (1) stor bokstav och minst 8 tecken långt." required>
+        <label for="password-confirm"><i class="material-icons">key</i>Upprepa lösenord:</label>
+        <input type="password" name="password-confirm" id="password-confirm"  autocomplete="new-password-confirm" required>
+        <input type="submit" name="register" id="register"value="Registrera mig">
+        <label for="newsletter" id="newsletter-label">Prenumerera på nyhetsbrev?&emsp;<span>Ja</span></label>
+        <input type="checkbox" name="newsletter" id="newsletter">
+      </form>
+      <button class="close-register"><i class="material-icons">close</i></button>
+      <h2>Registrera dig</h2>
+    </div>
+  </div>
+  </div>
+
+
     <section class="current-movies">
       <h2 class="current-movies-header">På bion just nu</h2>
       <ul class="current-movies-list">
@@ -164,6 +203,7 @@
   <script src="js/hamburgerMenu.js"></script>
   <script src="js/navMenu.js"></script>
   <script src="js/search.js" type="module"></script>
+  <script src="js/loginSignUp.js"></script>
   <script src="js/asideShowTimes.js" type="module"></script>
   <script src="index.js" type="module"></script>
 </body>
