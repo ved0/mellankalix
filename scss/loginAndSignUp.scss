@@ -1,12 +1,18 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css";
 
+nav {
+  background-color: inherit;
+  box-shadow: none;
+  line-height: 2em;
+}
 .login-sign-up-container {
   display: none;
   background-color: $c-gray-light;
   position: fixed;
   top: 9em;
-  width: 75%;
-  height: 53%;
+  width: 80%;
+  height: 75vh;
   z-index: 1001;
   text-align: center;
   left: 0;
@@ -16,41 +22,36 @@
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
-.login {
+.login,
+.sign-up {
   display: none;
   width: 100%;
   height: 100%;
-
-  .login-form {
-    padding-top: 5em;
+  h2 {
+    font-size: 2em;
+  }
+  form {
     padding-bottom: 1em;
-    width: 50%;
-    margin-inline: auto;
-
-    label {
-      display: inline-block;
-      width: 225px;
-      margin-inline: auto;
-
-      i {
-        padding-right: 0.25em;
-        font-size: 2em;
+    .row {
+      width: 50%;
+      margin-bottom: 0;
+      div {
+        height: 3em;
         position: relative;
-        top: 0.25em;
+        left: 25%;
       }
     }
-    input {
-      width: 135px;
-    }
 
-    #submit {
+    #submit,
+    #register {
       margin: 0;
       padding: 0;
       border: none;
 
       display: block;
       margin-inline: auto;
-      width: 120px;
+      width: 145px;
+      line-height: 1.5em;
       margin-top: 3em;
       margin-bottom: 0.75em;
       border-radius: 1.5em;
@@ -70,6 +71,7 @@
   }
 
   span {
+    display: block;
     font-size: 0.9em;
   }
 
@@ -89,7 +91,8 @@
     }
   }
 
-  .close-login {
+  .close-login,
+  .close-register {
     margin: 0;
     padding: 0;
     border: 0;
@@ -106,172 +109,6 @@
         color: $c-red-light;
         font-size: 3.5em;
         transition: font-size 0.7s;
-      }
-    }
-  }
-  h2 {
-    position: absolute;
-    top: 0.5em;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    color: $c-red-dark;
-  }
-}
-
-.sign-up-container {
-  display: none;
-  width: 100%;
-  height: 100%;
-  padding-top: 5.5em;
-
-  .sign-up {
-    width: 53%;
-    margin-left: auto;
-    margin-right: auto;
-    .sign-up-form {
-      width: 100%;
-      label {
-        display: inline-block;
-        width: 49%;
-        i {
-          margin-right: 0.25em;
-          position: relative;
-          top: 0.25em;
-        }
-      }
-      input {
-        position: relative;
-        width: 140px;
-      }
-
-      #register {
-        margin: 0;
-        padding: 0;
-        border: none;
-        float: none;
-
-        display: block;
-        margin-inline: auto;
-        width: 160px;
-        margin-top: 2.5em;
-        margin-bottom: 0.75em;
-        border-radius: 1.5em;
-        background-color: $c-red-dark;
-        padding: 0.5em 2em;
-        white-space: initial;
-        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        font-size: 0.9em;
-        color: $c-gray-light;
-        font-weight: bold;
-
-        &:hover {
-          background-color: $c-red-light;
-        }
-      }
-
-      #newsletter-label {
-        font-size: 0.75em;
-        font-weight: 500;
-        width: fit-content;
-        color: $c-red-dark;
-        span {
-          color: $c-red-dark;
-          font-weight: bold;
-          font-size: 1em;
-        }
-      }
-
-      #newsletter {
-        cursor: pointer;
-        width: 15px;
-        float: none;
-        position: relative;
-        top: 0.25em;
-      }
-    }
-
-    .close-register {
-      margin: 0;
-      padding: 0;
-      border: 0;
-
-      position: absolute;
-      right: 1em;
-      top: 1em;
-
-      i {
-        font-size: 3em;
-        cursor: pointer;
-
-        &:hover {
-          color: $c-red-light;
-          font-size: 3.5em;
-          transition: font-size 0.7s;
-        }
-      }
-    }
-    h2 {
-      position: absolute;
-      top: 0.5em;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-      color: $c-red-dark;
-    }
-  }
-}
-
-@media (max-width: 1000px) {
-  .login-sign-up-container {
-    width: 85%;
-    height: 70vh;
-
-    .login {
-      height: 70%;
-      padding-top: 3em;
-
-      form {
-        label {
-          display: block;
-          width: fit-content;
-          margin-inline: auto;
-        }
-        input {
-            margin-top: 0.25em;
-            display: block;
-            margin-inline: auto;
-        }
-      }
-    }
-    .sign-up {
-      width: 100% !important;
-      text-align: center;
-
-      form {
-        margin-inline: auto;
-        width: 95% !important;
-        input {
-          display: block;
-          margin-inline: auto;
-          margin-top: 0.25em;
-          float: none !important;
-        }
-
-        #newsletter-label {
-          span {
-            margin-top: 0.25em;
-            display: block;
-          }
-        }
-
-        #newsletter {
-          display: inline;
-          position: relative;
-          float: none;
-          right: 6em;
-        }
       }
     }
   }
