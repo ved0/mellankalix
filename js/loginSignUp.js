@@ -13,8 +13,6 @@ const closeLoginWindowButton = document.querySelector(".close-login");
 const closeRegistrationWindowButton = document.querySelector(".close-register");
 
 logInMenuButton.addEventListener("click", () => {
-  signUpContainer.classList.remove("show");
-  loginContainer.classList.remove("show");
   mainContainer.classList.toggle("show");
   loginContainer.classList.toggle("show");
 });
